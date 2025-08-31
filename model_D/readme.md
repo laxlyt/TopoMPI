@@ -1,14 +1,14 @@
-##Model-D (Metabolite–Protein Interaction Prediction)
+# Model-D (Metabolite–Protein Interaction Prediction)
 
-#Overview
+## Overview
 Model-D is designed to predict direct metabolite–protein interactions (MPIs) using a heterogeneous graph neural network. The model integrates metabolite, protein, and their interaction networks, applies threshold-based filtering of input edges, generates balanced negative samples, and trains a GNN with early stopping. It outputs evaluation metrics, ROC curves, and full-network predictions for candidate metabolite–protein pairs.
 
-#Inputs and Outputs
+## Inputs and Outputs
 Required Inputs (from --data-dir, default: ../../data)
 
 The following files must exist in the input directory:
 
-Metabolite node features
+Metabolite node features：
 
 meta_smile_ex.csv (metabolite identifiers and structures)
 
