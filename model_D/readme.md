@@ -10,9 +10,9 @@ The following files must exist in the input directory:
 
 Metabolite node features：
 
-meta_smile_ex.csv (metabolite identifiers and structures)
+* meta_smile_ex.csv (metabolite identifiers and structures)
 
-metabolite_embeddings.csv (numeric embeddings of metabolites)
+* metabolite_embeddings.csv (numeric embeddings of metabolites)
 
 Protein node features
 
