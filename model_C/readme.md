@@ -39,9 +39,9 @@ The following files are required:
 
 (5) Labeled triplets
 
-* MC_positive.csv — curated positive drug–protein–metabolite triplets
+* MD_positive.csv — curated positive drug–protein–metabolite triplets
 
-* MC_negative.csv — curated negative drug–protein–metabolite triplets
+* MD_negative.csv — curated negative drug–protein–metabolite triplets
 
 Outputs (to --output-dir, default: ../../results/model_C)
 
@@ -54,3 +54,35 @@ Outputs (to --output-dir, default: ../../results/model_C)
 * Robustness analysis results with Gaussian noise and FGSM.
 
 * Ablation results by removing specific relations (e.g., PPI, MMI, DDI).
+
+## Usage
+
+    python -m model_C.model_C \
+      --data-dir ../../data \
+      --output-dir ../../results/model_C \
+      --threshold 900 \
+      --epochs 50
+
+## Command-line Arguments
+
+* --data-dir: Input directory containing all required files.
+
+* --output-dir: Directory where evaluation results, ROC figures, and prediction files will be saved. Default: ../../results/model_C.
+
+* --threshold: Score threshold applied to MPI/PPI edges when constructing the graph.
+
+* --epochs: Number of training epochs.
+
+* --alpha, --gamma: Focal loss parameters.
+
+* --neg-percent: Multiplier for negative samples relative to positives.
+
+* --min-precision: Minimum precision constraint when selecting the best threshold.
+
+* --run-robust: Enable robustness evaluation (noise, FGSM).
+
+* --run-ablation: Enable ablation experiments on relation types.
+
+* --run-full-pred: Generate predictions for all (drug, protein, metabolite) triplets.
+
+* --batch-size-predict: Batch size for full-network prediction.
