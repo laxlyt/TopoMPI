@@ -5,11 +5,11 @@
 TopoMPI is a framework of graph neural network models designed to predict and analyze metabolite–protein interactions (MPIs).
 The framework provides three complementary models:
 
-Model-D: Predicts direct MPIs (metabolite–protein edges).
+* Model-D: Predicts direct MPIs (metabolite–protein edges).
 
-Model-I: Predicts indirect MPIs by leveraging metabolite–metabolite and protein–protein relations.
+* Model-I: Predicts indirect MPIs by leveraging metabolite–metabolite and protein–protein relations.
 
-Model-C: Predicts drug-dependent MPIs as triplet interactions (drug, protein, metabolite).
+* Model-C: Predicts drug-dependent MPIs as triplet interactions (drug, protein, metabolite).
 
 Each model uses heterogeneous graph construction, negative sampling, focal loss, validation-based threshold tuning, and supports evaluation, robustness analysis, ablation studies, and full-network prediction.
 
