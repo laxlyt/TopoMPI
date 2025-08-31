@@ -46,7 +46,7 @@ The script generates:
 
 Basic run (default parameters)
 
-  python -m model_D.model_d \
+    python -m model_D.model_d \
       --data-dir ../../data \
       --ppi-threshold 900 \
       --mpi-threshold 900 \
@@ -54,6 +54,7 @@ Basic run (default parameters)
       --epochs 50 \
       --patience 5 \
       --output-dir ../../results/model_D
+
 
 
 
