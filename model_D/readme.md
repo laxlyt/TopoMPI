@@ -40,8 +40,6 @@ The script generates:
 
 * Prediction CSV for full-network metabolite–protein scores (excluding training positives).
 
-* Optional robustness and ablation results if enabled (noise, FGSM, randomized networks).
-
 ## Usage
 
 Basic run (default parameters)
