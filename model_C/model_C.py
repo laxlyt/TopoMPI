@@ -3,12 +3,7 @@ import argparse
 
 from data import load_data
 from train import run_training_experiment
-from evaluation import (
-    robustness_noise_evaluation,
-    robustness_fgsm_attack,
-    run_ablation_experiments,
-    predict_full_network,
-)
+from evaluation import predict_full_network
 
 
 def main():
@@ -21,8 +16,6 @@ def main():
     p.add_argument("--gamma", type=float, default=1.0, help="Focal Loss gamma")
     p.add_argument("--neg_percent", type=int, default=1, help="Negative sample percent (multiplier of positives)")
     p.add_argument("--min_precision", type=float, default=0.0, help="Min precision constraint for threshold tuning")
-    p.add_argument("--run_robust", action="store_true", help="Run robustness evaluations")
-    p.add_argument("--run_ablation", action="store_true", help="Run ablation experiments")
     p.add_argument("--run_full_pred", action="store_true", help="Run full-network prediction")
     p.add_argument("--batch_size_predict", type=int, default=40000, help="Batch size for full-network prediction")
     
@@ -57,28 +50,6 @@ def main():
     val_dataset = train_out["val_dataset"]
     test_dataset = train_out["test_dataset"]
     criterion = train_out["criterion"]
-
-    if args.run_robust:
-        robustness_noise_evaluation(model, data, test_dataset, criterion, save_dir=args.output_dir)
-        robustness_fgsm_attack(model, data, test_dataset, criterion, save_dir=args.output_dir)
-
-    if args.run_ablation:
-        experiments = {
-            "baseline": [],
-            "remove_PPI": [("protein", "interacts", "protein")],
-            "remove_MMI": [("metabolite", "interacts", "metabolite")],
-            "remove_MPI": [("metabolite", "interacts", "protein")],
-            "remove_DPI": [("drug", "interacts", "protein")],
-            "remove_DDI": [("drug", "interacts", "drug")],
-            "remove_MPI_PPI": [
-                ("metabolite", "interacts", "protein"),
-                ("protein", "interacts", "protein")
-            ],
-        }
-        run_ablation_experiments(
-            data, train_dataset, val_dataset, test_dataset, criterion,
-            experiments, save_dir=args.output_dir
-        )
 
     if args.run_full_pred:
         file_suffix = f"_score_{args.threshold}"
