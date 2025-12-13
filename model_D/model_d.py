@@ -176,10 +176,6 @@ def main():
     candidate_pairs.to_csv(os.path.join(args.output_dir, f'prediction_result_all{file_suffix}.csv'), index=False)
     logger.info(f"Filtered prediction results saved to {os.path.join(args.output_dir, f'prediction_result_all{file_suffix}.csv')}")
 
-    noise_results = robustness_noise_evaluation(model, full_data, test_samples, criterion, output_dir=args.output_dir)
-    fgsm_results  = robustness_fgsm_attack(model, full_data, test_samples, criterion, output_dir=args.output_dir)
-    ablation_results = run_ablation_experiments(data_dict, pro_id_mapping, meta_id_mapping, train_samples_tuning, val_samples_tuning, criterion, score_thresholds=(ppi_score_threshold, mpi_score_threshold), output_dir=args.output_dir)
-
     return model
 
 if __name__ == '__main__':
