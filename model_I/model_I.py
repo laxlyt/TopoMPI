@@ -4,12 +4,8 @@ import argparse
 from utils import ensure_dir
 from data import load_data, prepare_graph_data
 from train import run_training_experiment
-from evaluation import (
-    robustness_noise_evaluation,
-    robustness_fgsm_attack,
-    run_ablation_experiments,
-    predict_MPI_network,
-)
+from evaluation import predict_MPI_network
+
 
 
 def main():
@@ -22,18 +18,16 @@ def main():
     p.add_argument("--gamma", type=float, default=1.0, help="Focal Loss gamma (default: 1.0)")
     p.add_argument("--neg_samples", type=int, default=6000, help="Negative sample count (default: 6000)")
     p.add_argument("--min_precision", type=float, default=0.0, help="Min precision for threshold tuning (default: 0.0)")
-    p.add_argument("--run_robust", action="store_true", help="Run robustness evaluations (noise + FGSM)")
-    p.add_argument("--run_ablation", action="store_true", help="Run ablation experiments")
     p.add_argument("--run_full_pred", action="store_true", help="Run full MPI network prediction")
     p.add_argument("--batch_size_predict", type=int, default=40000, help="Batch size for full-network prediction")
 
     args = p.parse_args([])
     ensure_dir(args.output_dir)
 
-    # 1) Load all inputs 
+    # Load all inputs 
     ds = load_data(args.data_dir)
 
-    # 2) Train + validate (threshold tuning) + test (metrics & ROC saved to output_dir)
+    # Train + validate (threshold tuning) + test (metrics & ROC saved to output_dir)
     train_out = run_training_experiment(
         ds["MPI_edge_df"], ds["PPi_edge_df"], ds["MMi_edge_df"],
         ds["positive_set_df"], ds["negative_set_df"],
@@ -59,29 +53,7 @@ def main():
     test_dataset = train_out["test_dataset"]
     criterion = train_out["criterion"]
 
-    # 3) Optional: robustness evaluations
-    if args.run_robust:
-        robustness_noise_evaluation(model, data, test_dataset, criterion, save_dir=args.output_dir)
-        robustness_fgsm_attack(model, data, test_dataset, criterion, save_dir=args.output_dir)
-
-    # 4) Optional: ablation experiments
-    if args.run_ablation:
-        experiments = {
-            "baseline": [],
-            "remove_pro_pro": [("protein", "interacts", "protein")],
-            "remove_meta_meta": [("metabolite", "interacts", "metabolite")],
-            "remove_meta_pro": [("metabolite", "interacts", "protein")],
-            "remove_pro_pro_and_meta_meta": [
-                ("protein", "interacts", "protein"),
-                ("metabolite", "interacts", "metabolite")
-            ],
-        }
-        run_ablation_experiments(
-            data, train_dataset, val_dataset, test_dataset, criterion,
-            experiments, save_dir=args.output_dir
-        )
-
-    # 5) Optional: full-network prediction
+    # Optional: full-network prediction
     if args.run_full_pred:
         # file_suffix retains original naming style if needed
         file_suffix = f"_score_{args.threshold}"
