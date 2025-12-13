@@ -46,10 +46,6 @@ Outputs (to --output-dir, default: ../../results/model_I)
 
 * Full-network MPI predictions across all candidate pairs.
 
-* Robustness results under noise/FGSM if enabled.
-
-* Ablation experiment results for selected relation types if enabled.
-
 ## Basic run (default)  
 
     python -m model_I.model_I \
@@ -74,10 +70,7 @@ Outputs (to --output-dir, default: ../../results/model_I)
 
 * --min-precision: Minimum precision constraint for threshold tuning.
 
-* --run-robust: Flag to run robustness evaluations (noise injection, FGSM).
-
-* --run-ablation: Flag to run ablation experiments by removing specific relation types.
-
 * --run-full-pred: Flag to generate full-network MPI predictions.
 
 * --batch-size-predict: Batch size for full-network predictions.
+
