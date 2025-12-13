@@ -51,10 +51,6 @@ Outputs (to --output-dir, default: ../../results/model_C)
 
 * Full-network predictions for all possible (drug, protein, metabolite) combinations.
 
-* Robustness analysis results with Gaussian noise and FGSM.
-
-* Ablation results by removing specific relations (e.g., PPI, MMI, DDI).
-
 ## Usage
 
     python -m model_C.model_C \
@@ -79,10 +75,7 @@ Outputs (to --output-dir, default: ../../results/model_C)
 
 * --min-precision: Minimum precision constraint when selecting the best threshold.
 
-* --run-robust: Enable robustness evaluation (noise, FGSM).
-
-* --run-ablation: Enable ablation experiments on relation types.
-
 * --run-full-pred: Generate predictions for all (drug, protein, metabolite) triplets.
 
 * --batch-size-predict: Batch size for full-network prediction.
+
