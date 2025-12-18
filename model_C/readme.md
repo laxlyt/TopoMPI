@@ -33,9 +33,9 @@ The following files are required:
 
 * MMI_original_lung.csv — metabolite–metabolite interactions
 
-* DPI_original_lung.csv — drug–protein interactions
+* DPI.csv — drug–protein interactions
 
-* DDI_original_lung.csv — drug–drug similarities
+* drug_drug_emsim.csv — drug–drug similarities
 
 (5) Labeled triplets
 
@@ -78,4 +78,5 @@ Outputs (to --output-dir, default: ../../results/model_C)
 * --run-full-pred: Generate predictions for all (drug, protein, metabolite) triplets.
 
 * --batch-size-predict: Batch size for full-network prediction.
+
 
