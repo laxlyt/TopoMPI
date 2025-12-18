@@ -48,8 +48,9 @@ Model-C (Drug-dependent MPIs)
 
 * Outputs: Evaluation metrics, ROC curve, triplet prediction CSV, robustness and ablation results.
 
+* Details: model_C/README.md
+
 ## Example Data
 
 * https://drive.google.com/drive/folders/1EFHDqxoYJYgGF66rkF5n-muQT9YSlT9Y?usp=drive_link
 
-* Details: model_C/README.md
