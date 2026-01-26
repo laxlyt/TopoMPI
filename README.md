@@ -52,5 +52,60 @@ Model-C (Drug-dependent MPIs)
 
 ## Example Data
 
+Download link:
+
 * https://drive.google.com/drive/folders/1EFHDqxoYJYgGF66rkF5n-muQT9YSlT9Y?usp=drive_link
 
+The demo data include:
+
+* Metabolite, protein, and drug node embeddings
+
+* MPI / PPI / MMI / DPI / DDI edge tables
+
+* Labeled positive and negative samples for training and evaluation
+
+## System Requirements
+
+Operating Systems Tested
+
+* Linux (Ubuntu 20.04, 22.04)
+  
+* Windows
+
+Python Environment
+
+* Python 3.9 – 3.11
+
+Core Dependencies
+
+All dependencies are open-source and installable via pip:
+
+* torch ≥ 2.0
+
+* torch-geometric ≥ 2.4
+
+* numpy ≥ 1.23
+
+* pandas ≥ 1.5
+
+* scikit-learn ≥ 1.2
+
+* matplotlib ≥ 3.7
+
+Hardware Requirements
+
+* Minimum: Standard desktop/laptop (CPU-only supported)
+
+* Recommended: NVIDIA GPU with ≥ 8 GB memory for Model-C
+ 
+* No non-standard hardware is required
+
+## Supplementary Model-Specific Documentation
+
+Detailed usage instructions, input formats, configurable parameters, and output descriptions for each TopoMPI submodel are provided in the corresponding subdirectory README files:
+
+* TopoMPI-D: model_D/README.md
+
+* TopoMPI-I: model_I/README.md
+
+* TopoMPI-C: model_C/README.md
