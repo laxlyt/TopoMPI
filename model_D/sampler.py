@@ -2,7 +2,7 @@ from typing import Optional, Dict
 import pandas as pd
 import torch
 from torch_geometric.utils import negative_sampling
-from utils import device, NEGATIVE_SAMPLE_MULTIPLIER
+from .utils import device, NEGATIVE_SAMPLE_MULTIPLIER
 
 def generate_negative_samples(
     pos_samples_df: pd.DataFrame,
