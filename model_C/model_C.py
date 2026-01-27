@@ -1,9 +1,9 @@
 import os
 import argparse
 
-from data import load_data
-from train import run_training_experiment
-from evaluation import predict_full_network
+from .data import load_data
+from .train import run_training_experiment
+from .evaluation import predict_full_network
 
 
 def main():
