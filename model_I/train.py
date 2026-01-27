@@ -8,10 +8,10 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import random as rnd
 
-from models import FocalLoss, LinkPredictor
-from evaluation import save_test_metrics
-from utils import device, logger
-from data import LinkPredictionDataset
+from .models import FocalLoss, LinkPredictor
+from .evaluation import save_test_metrics
+from .utils import device, logger
+from .data import LinkPredictionDataset
 
 def run_training_experiment(MPI_edge_df, ppi_df, mmi_df,
                             positive_set_df, negative_set_df,
