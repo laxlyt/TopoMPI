@@ -1,10 +1,10 @@
 import os
 import argparse
 
-from utils import ensure_dir
-from data import load_data, prepare_graph_data
-from train import run_training_experiment
-from evaluation import predict_MPI_network
+from .utils import ensure_dir
+from .data import load_data, prepare_graph_data
+from .train import run_training_experiment
+from .evaluation import predict_MPI_network
 
 
 
