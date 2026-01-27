@@ -8,10 +8,10 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 from torch_geometric.data import HeteroData
-from utils import device, logger
-from metrics import evaluate_model
-from train import train_model
-from models import HeteroGNN
+from .utils import device, logger
+from .metrics import evaluate_model
+from .train import train_model
+from .models import HeteroGNN
 
 # --- Ablation graph builders ---
 def build_heterodata_ablation(data, pro_id_mapping, meta_id_mapping, score_thresholds, remove_relations=[]):
