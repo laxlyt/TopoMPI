@@ -4,7 +4,7 @@ import pandas as pd
 import torch
 from torch_geometric.data import HeteroData
 from sklearn.preprocessing import StandardScaler
-from utils import device
+from .utils import device
 
 def load_data(data_dir: str = '../../data') -> Dict:
     """
