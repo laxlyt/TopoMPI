@@ -12,7 +12,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from models import ExtendedLinkPredictor
+from .models import ExtendedLinkPredictor
 
 
 def evaluate_model(model, data, dataset, criterion):
