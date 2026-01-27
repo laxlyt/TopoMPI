@@ -8,9 +8,9 @@ from torch.utils.data import DataLoader, SubsetRandomSampler
 from sklearn.metrics import roc_auc_score, f1_score, precision_score
 from sklearn.model_selection import train_test_split
 
-from models import FocalLoss, ExtendedLinkPredictor
-from data import TripletDataset, prepare_graph_data
-from evaluation import evaluate_and_save
+from .models import FocalLoss, ExtendedLinkPredictor
+from .data import TripletDataset, prepare_graph_data
+from .evaluation import evaluate_and_save
 
 
 def run_training_experiment(MPI_edge_df, PPI_edge_df, MMI_edge_df,
