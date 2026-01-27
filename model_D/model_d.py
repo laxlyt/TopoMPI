@@ -11,12 +11,12 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
 
-from utils import logger, device, NEGATIVE_SAMPLE_MULTIPLIER
-from data import load_data, build_heterodata
-from models import HeteroGNN
-from sampler import generate_negative_samples
-from metrics import evaluate_model
-from train import train_model
+from .utils import logger, device, NEGATIVE_SAMPLE_MULTIPLIER
+from .data import load_data, build_heterodata
+from .models import HeteroGNN
+from .sampler import generate_negative_samples
+from .metrics import evaluate_model
+from .train import train_model
 
 
 def main():
