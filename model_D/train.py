@@ -1,7 +1,7 @@
 from typing import Tuple, List
 import torch
-from metrics import evaluate_model
-from utils import logger
+from .metrics import evaluate_model
+from .utils import logger
 
 def train_model(
     model,
