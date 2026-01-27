@@ -2,7 +2,7 @@ from typing import Dict, Tuple
 import numpy as np
 import torch
 from sklearn.metrics import roc_auc_score, roc_curve, f1_score, precision_score, recall_score, accuracy_score
-from utils import device
+from .utils import device
 
 def get_best_threshold(y_true: np.ndarray, y_scores: np.ndarray) -> Tuple[float, float]:
     """
