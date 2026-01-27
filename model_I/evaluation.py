@@ -10,7 +10,7 @@ from sklearn.metrics import (
     roc_auc_score, f1_score, precision_score, recall_score,
     accuracy_score, roc_curve
 )
-from models import LinkPredictor
+from .models import LinkPredictor
 
 # -----------------------------
 # Basic evaluation
