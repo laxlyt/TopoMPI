@@ -21,7 +21,7 @@ def main():
     p.add_argument("--run_full_pred", action="store_true", help="Run full MPI network prediction")
     p.add_argument("--batch_size_predict", type=int, default=40000, help="Batch size for full-network prediction")
 
-    args = p.parse_args([])
+    args = p.parse_args()
     ensure_dir(args.output_dir)
 
     # Load all inputs 
