@@ -19,7 +19,7 @@ def main():
     p.add_argument("--run_full_pred", action="store_true", help="Run full-network prediction")
     p.add_argument("--batch_size_predict", type=int, default=40000, help="Batch size for full-network prediction")
     
-    args = p.parse_args([])
+    args = p.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
 
     ds = load_data(args.data_dir)
