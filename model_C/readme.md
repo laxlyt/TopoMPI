@@ -54,8 +54,8 @@ Outputs (to --output-dir, default: ../../results/model_C)
 ## Usage
 
     python -m model_C.model_C \
-      --data-dir ../../data \
-      --output-dir ../../results/model_C \
+      --data_dir ../../data \
+      --output_dir ../../results/model_C \
       --threshold 900 \
       --epochs 50
 
@@ -78,5 +78,6 @@ Outputs (to --output-dir, default: ../../results/model_C)
 * --run-full-pred: Generate predictions for all (drug, protein, metabolite) triplets.
 
 * --batch-size-predict: Batch size for full-network prediction.
+
 
 
