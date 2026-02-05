@@ -21,13 +21,13 @@ from .train import train_model
 
 def main():
     parser = argparse.ArgumentParser(description="Model-D training/evaluation.")
-    parser.add_argument('--data-dir', type=str, default='../../data', help="Input data root (default: ../../data).")
+    parser.add_argument('--data_dir', type=str, default='../../data', help="Input data root (default: ../../data).")
     parser.add_argument('--ppi-threshold', type=int, default=900, help="PPI score threshold.")
     parser.add_argument('--mpi-threshold', type=int, default=900, help="MPI score threshold.")
     parser.add_argument('--neg-multiplier', type=int, default=NEGATIVE_SAMPLE_MULTIPLIER, help="Negative sampling multiplier.")
     parser.add_argument('--epochs', type=int, default=50, help="Training epochs.")
     parser.add_argument('--patience', type=int, default=5, help="Early stopping patience.")
-    parser.add_argument('--output-dir', type=str, default='../../results/model_D',
+    parser.add_argument('--output_dir', type=str, default='../../results/model_D',
                         help="Directory to save results and figures (default: ../../results/model_D).")
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
