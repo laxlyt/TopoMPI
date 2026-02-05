@@ -56,9 +56,9 @@ Outputs (to --output-dir, default: ../../results/model_I)
 
 ## Command-line Arguments
 
-* --data-dir: Path to the input directory with all required CSV/TSV files.
+* --data_dir: Path to the input directory with all required CSV/TSV files.
 
-* --save-dir: Directory where evaluation metrics, figures, and predictions will be written. Default: ../../results/model_I.
+* --save_dir: Directory where evaluation metrics, figures, and predictions will be written. Default: ../../results/model_I.
 
 * --threshold: Score cutoff for filtering edges (default: 900).
 
@@ -73,4 +73,5 @@ Outputs (to --output-dir, default: ../../results/model_I)
 * --run-full-pred: Flag to generate full-network MPI predictions.
 
 * --batch-size-predict: Batch size for full-network predictions.
+
 
