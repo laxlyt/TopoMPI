@@ -61,9 +61,9 @@ Outputs (to --output-dir, default: ../../results/model_C)
 
 ## Command-line Arguments
 
-* --data-dir: Input directory containing all required files.
+* --data_dir: Input directory containing all required files.
 
-* --output-dir: Directory where evaluation results, ROC figures, and prediction files will be saved. Default: ../../results/model_C.
+* --output_dir: Directory where evaluation results, ROC figures, and prediction files will be saved. Default: ../../results/model_C.
 
 * --threshold: Score threshold applied to MPI/PPI edges when constructing the graph.
 
@@ -78,6 +78,7 @@ Outputs (to --output-dir, default: ../../results/model_C)
 * --run-full-pred: Generate predictions for all (drug, protein, metabolite) triplets.
 
 * --batch-size-predict: Batch size for full-network prediction.
+
 
 
 
