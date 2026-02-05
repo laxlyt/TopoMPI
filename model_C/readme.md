@@ -5,7 +5,7 @@
 Model-C extends MPI prediction by incorporating drug dependence. It predicts triplet interactions of (drug, protein, metabolite), modeling how drugs may mediate or modify MPIs. The model constructs a heterogeneous graph with drugs, proteins, and metabolites, linked through multiple edge types (MPI, PPI, MMI, DPI, DDI). It trains using focal loss, selects thresholds by validation F1, evaluates on test sets, and supports robustness tests and ablation studies.
 
 ## Inputs and Outputs
-Required Inputs (from --data-dir)
+Required Inputs (from --data_dir)
 
 The following files are required:
 
@@ -78,6 +78,7 @@ Outputs (to --output-dir, default: ../../results/model_C)
 * --run-full-pred: Generate predictions for all (drug, protein, metabolite) triplets.
 
 * --batch-size-predict: Batch size for full-network prediction.
+
 
 
 
