@@ -45,18 +45,18 @@ The script generates:
 Basic run (default parameters)
 
     python -m model_D.model_d \
-      --data-dir [] \
+      --data_dir [] \
       --ppi-threshold 900 \
       --mpi-threshold 900 \
       --neg-multiplier 2 \
       --epochs 50 \
       --patience 5 \
-      --output-dir ../../results/model_D
+      --output_dir ../../results/model_D
 
 
 ## Command-line Arguments
 
-* --data-dir: Path to the input data directory (default: ../../data). Must contain the node and edge CSV files described above.
+* --data_dir: Path to the input data directory (default: ../../data). Must contain the node and edge CSV files described above.
 
 * --ppi-threshold: Minimum PPI score for retaining protein–protein edges.
 
@@ -68,7 +68,7 @@ Basic run (default parameters)
 
 * --patience: Early stopping patience (in epochs) based on validation loss.
 
-* --output-dir: Directory where all evaluation results, figures, and prediction CSVs will be saved. Default is ../../results/model_D.
+* --output_dir: Directory where all evaluation results, figures, and prediction CSVs will be saved. Default is ../../results/model_D.
 
 
 
