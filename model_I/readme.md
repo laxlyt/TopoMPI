@@ -6,7 +6,7 @@ Model-I predicts indirect metabolite–protein interactions (MPIs) by leveraging
 
 ## Inputs and Outputs
 
-Required Inputs (from --data-dir)
+Required Inputs (from --data_dir)
 
 The following files must be present in the input directory:
 
@@ -73,6 +73,7 @@ Outputs (to --output-dir, default: ../../results/model_I)
 * --run-full-pred: Flag to generate full-network MPI predictions.
 
 * --batch-size-predict: Batch size for full-network predictions.
+
 
 
 
