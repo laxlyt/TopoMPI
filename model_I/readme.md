@@ -49,8 +49,8 @@ Outputs (to --output-dir, default: ../../results/model_I)
 ## Basic run (default)  
 
     python -m model_I.model_I \
-      --data-dir [] \
-      --save-dir ../../results/model_I \
+      --data_dir [] \
+      --output_dir ../../results/model_I \
       --threshold 900 \
       --epochs 50
 
@@ -58,7 +58,7 @@ Outputs (to --output-dir, default: ../../results/model_I)
 
 * --data_dir: Path to the input directory with all required CSV/TSV files.
 
-* --out_dir: Directory where evaluation metrics, figures, and predictions will be written. Default: ../../results/model_I.
+* --output_dir: Directory where evaluation metrics, figures, and predictions will be written. Default: ../../results/model_I.
 
 * --threshold: Score cutoff for filtering edges (default: 900).
 
@@ -73,6 +73,7 @@ Outputs (to --output-dir, default: ../../results/model_I)
 * --run-full-pred: Flag to generate full-network MPI predictions.
 
 * --batch-size-predict: Batch size for full-network predictions.
+
 
 
 
