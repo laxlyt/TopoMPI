@@ -4,7 +4,7 @@
 Model-D is designed to predict direct metabolite–protein interactions (MPIs) using a heterogeneous graph neural network. The model integrates metabolite, protein, and their interaction networks, applies threshold-based filtering of input edges, generates balanced negative samples, and trains a GNN with early stopping. It outputs evaluation metrics, ROC curves, and full-network predictions for candidate metabolite–protein pairs.
 
 ## Inputs and Outputs
-Required Inputs (from --data-dir, default: ../../data)
+Required Inputs (from --data-dir)
 
 The following files must exist in the input directory:
 
@@ -45,7 +45,7 @@ The script generates:
 Basic run (default parameters)
 
     python -m model_D.model_d \
-      --data-dir ../../data \
+      --data-dir [] \
       --ppi-threshold 900 \
       --mpi-threshold 900 \
       --neg-multiplier 2 \
