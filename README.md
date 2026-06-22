@@ -8,6 +8,8 @@ TopoMPI is a heterogeneous graph learning framework for metabolite–protein int
 4. **Direction-aware TopoMPI-D extension**: activation versus inhibition prediction for direct MPI pairs.
 
 The direction-aware module is an extension of TopoMPI-D rather than a fourth independent biological task. It is provided as a separate script because its supervision labels and evaluation workflow differ from the binary direct-MPI prediction task.
+<img width="5481" height="5982" alt="figure1" src="https://github.com/user-attachments/assets/cbac67fa-69fb-497b-81ea-1cbe1fac56c0" />
+
 
 ---
 
