@@ -1,0 +1,12 @@
+# Core scientific Python stack
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2
+
+# Deep learning and graph neural networks
+# For GPU use, install PyTorch and PyTorch Geometric versions matching your CUDA environment.
+torch>=2.0
+torch-geometric>=2.3
+
+# Progress bars for optional prediction exports
+tqdm>=4.64
