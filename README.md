@@ -45,7 +45,7 @@ Example data are hosted externally and are not tracked directly in this reposito
 Download the example data from:
 
 ```text
-【外部链接】
+https://drive.google.com/drive/folders/1EFHDqxoYJYgGF66rkF5n-muQT9YSlT9Y?usp=drive_link
 ```
 
 After downloading and extracting the files, place the folder at the repository root as:
